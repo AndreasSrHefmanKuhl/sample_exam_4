@@ -46,40 +46,39 @@ class _SampleExamScreenState extends State<SampleExamScreen> {
                   });
                 }),
           ]),
-          ListView(children: [
-            ListTile(
-                title: Column(
-                    mainAxisAlignment: _alignstart
-                        ? MainAxisAlignment.start
-                        : MainAxisAlignment.spaceBetween,
-                    children: [
-                  Icon(
-                    Icons.favorite,
-                    color: Colors.red,
-                    size: 50,
-                  ),
-                  Icon(
-                    Icons.circle,
-                    color: Colors.green,
-                    size: 50,
-                  ),
-                  Icon(
-                    Icons.star,
-                    color: Colors.blue,
-                    size: 50,
-                  ),
-                  SizedBox(
-                    height: 50,
-                  ),
-                  FloatingActionButton(
-                      child: Text('swap'),
-                      onPressed: () {
-                        setState(() {
-                          _alignstart = !_alignstart;
-                        });
-                      }),
-                ]))
-          ])
+          SizedBox(
+              height: 200,
+              child: Column(
+                  mainAxisAlignment: _alignstart
+                      ? MainAxisAlignment.start
+                      : MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.favorite,
+                      color: Colors.red,
+                      size: 50,
+                    ),
+                    Icon(
+                      Icons.circle,
+                      color: Colors.green,
+                      size: 50,
+                    ),
+                    Icon(
+                      Icons.star,
+                      color: Colors.blue,
+                      size: 50,
+                    ),
+                  ])),
+          SizedBox(
+            height: 50,
+          ),
+          FloatingActionButton(
+              child: Text('swap'),
+              onPressed: () {
+                setState(() {
+                  _alignstart = !_alignstart;
+                });
+              }),
         ]),
       ),
     );
